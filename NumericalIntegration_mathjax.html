@@ -1,0 +1,1039 @@
+<h1 class="unnumbered" id="trapezoidal-rule">Trapezoidal Rule</h1>
+<p>Suppose we need to approximate the integral <span class="math display">\[\displaystyle \int_a^b f(x)\, dx\]</span> using the Trapezoidal Rule with <span class="math inline">\(n\)</span> subdivisions. Then: <span class="math display">\[\displaystyle \int_a^b f(x)\, dx \approx T_n = \frac{h}{2} \Big[ f(x_0) + f(x_n) + 2 \Big( f(x_1) + f(x_2) + \ldots + f(x_{n-1}) \Big) \Big]\]</span> where: <span class="math display">\[h = \frac{b-a}{n}, \quad x_i = a + ih,\quad \text{for } i = 0, 1, 2, \ldots, n\]</span> Also, <span class="math display">\[x_0 = a, \quad x_n = b\]</span></p>
+<p><strong>Computation Table:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong><span class="math inline">\(i\)</span></strong></th>
+<th style="text-align: center;"><strong><span class="math inline">\(x_i\)</span></strong></th>
+<th style="text-align: center;"><strong><span class="math inline">\(f(x_i)\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">⋮</td>
+<td style="text-align: center;">⋮</td>
+<td style="text-align: center;">⋮</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(n-1\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(n\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Use Trapezoidal Rule to approximate the following integrals with the given <span class="math inline">\(n\)</span>.</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle \int_{0}^{1}e^{4x^{2}}dx, \quad n = 7\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int_{8}^{30} \left[ 2000 \ln \left( \frac{140000}{140000 - 2100t} \right) - 9.8t \right] dt, \quad n = 5\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int_{0}^{4}x\sin{x} \,dx, \quad n = 5\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int_{0}^{4} \sqrt{x}e^{x} dx, \quad n = 7\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int_{1}^{3} \ln x \, dx, \quad n = 6\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int_{0}^{2} xe^{-x} dx, \quad n = 8\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int_{0}^{\pi} f(x) dx, \text{ where } f(x) = \begin{cases} \frac{\sin x}{x}, &amp; x &gt; 0 \\ 1, &amp; x = 0 \end{cases}  \quad ; \quad n = 6\)</span></p></li>
+</ul>
+<h1 class="unnumbered" id="simpsons-rule">Simpson’s Rule</h1>
+<p>Suppose we need to approximate the integral <span class="math display">\[\displaystyle \int_a^b f(x)\, dx\]</span> using Simpson’s Rule with <span class="math inline">\(n\)</span> subdivisions (note: <span class="math inline">\(n\)</span> must be even). Then: <span class="math display">\[\displaystyle \int_a^b f(x)\, dx \approx S_n = \frac{h}{3} \Big[ f(x_0) + f(x_n) + 4 \Big( f(x_1) + f(x_3) + \ldots + f(x_{n-1}) \Big) + 2 \Big( f(x_2) + f(x_4) + \ldots + f(x_{n-2}) \Big) \Big]\]</span> where: <span class="math display">\[h = \frac{b-a}{n}, \quad x_i = a + ih,\quad \text{for } i = 0, 1, 2, \ldots, n\]</span> Also, <span class="math display">\[x_0 = a, \quad x_n = b\]</span></p>
+<p><strong>Computation Table:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong><span class="math inline">\(i\)</span></strong></th>
+<th style="text-align: center;"><strong><span class="math inline">\(x_i\)</span></strong></th>
+<th style="text-align: center;"><strong><span class="math inline">\(f(x_i)\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">⋮</td>
+<td style="text-align: center;">⋮</td>
+<td style="text-align: center;">⋮</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(n-1\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(n\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Use Simpson’s Rule to approximate the following integrals with the given <span class="math inline">\(n\)</span>.</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle \int_{0}^{1}e^{4x^{2}}dx, \quad n = 6\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int_{8}^{30} \left[ 2000 \ln \left( \frac{140000}{140000 - 2100t} \right) - 9.8t \right] dt, \quad n = 8\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int_{0}^{4}x\sin{x} \,dx, \quad n = 8\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int_{0}^{4} \sqrt{x}e^{x} dx, \quad n = 6\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int_{1}^{3} \ln x \, dx, \quad n = 6\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int_{0}^{2} xe^{-x} dx, \quad n = 8\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int_{0}^{\pi} f(x) dx, \text{ where } f(x) = \begin{cases} \frac{\sin x}{x}, &amp; x &gt; 0 \\ 1, &amp; x = 0 \end{cases}  \quad ; \quad n = 6\)</span></p></li>
+</ul>
+<h1 class="unnumbered" id="suggested-solutions-for-activity-1">Suggested Solutions for Activity 1</h1>
+<ul>
+<li><p>We want to approximate the integral: <span class="math display">\[\int_0^1 e^{4x^2} \, dx\]</span> using the <strong>Trapezoidal Rule</strong> with <span class="math inline">\(n = 7\)</span> subdivisions.</p>
+<p>Here we have: <span class="math display">\[\begin{aligned}
+a &amp;= x_0 = 0, \\
+b &amp;= x_7 = 1, \\
+n &amp;= 7, \\
+f(x) &amp;= e^{4x^2}.\end{aligned}\]</span></p>
+<p>Now, <span class="math display">\[h = \frac{b - a}{n} = \frac{1 - 0}{7} = \frac{1}{7}\]</span> and <span class="math display">\[x_i = a + ih = 0 + i\left(\frac{1}{7}\right) = \frac{i}{7}, \quad \text{for } i = 0, 1, 2, \dots, 7.\]</span></p>
+<p>Thus, we tabulate the data as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f(x_i) = e^{4(x_i)^2}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;">1.00000000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{7}\)</span></td>
+<td style="text-align: center;">1.08505714419</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{2}{7}\)</span></td>
+<td style="text-align: center;">1.38615068230</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{3}{7}\)</span></td>
+<td style="text-align: center;">2.08484367736</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{4}{7}\)</span></td>
+<td style="text-align: center;">3.69183066048</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{5}{7}\)</span></td>
+<td style="text-align: center;">7.69688981037</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{6}{7}\)</span></td>
+<td style="text-align: center;">18.89269822665</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;">54.59815003314</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <span class="math display">\[\begin{aligned}
+\int_{0}^{1} e^{4x^2} \, dx &amp;\approx T_7 \\
+&amp;= \frac{h}{2} \left[ f(x_0) + f(x_7) + 2 \left(f(x_1) + f(x_2) + f(x_3) + f(x_4) + f(x_4) + f(x_5) + f(x_6)\right) \right] \\
+&amp;= \frac{\frac{1}{7}}{2} \left[ 1 + 54.59815003314 + 2 \left( 
+1.08505714419 + 1.38615068230 + 2.08484367736 \right. \right. \\
+&amp;\quad \left. \left. +\ 3.69183066048 + 7.69688981037 + 18.89269822665 \right) \right] = \boxed{8.94807788827}.\end{aligned}\]</span></p></li>
+<li><p>We want to approximate the integral: <span class="math display">\[\int_{8}^{30} \left[ 2000 \ln \left( \frac{140000}{140000 - 2100t} \right) - 9.8t \right] dt\]</span> using the <strong>Trapezoidal Rule</strong> with <span class="math inline">\(n = 5\)</span> subdivisions.</p>
+<p>Here we have: <span class="math display">\[\begin{aligned}
+a &amp;= t_0 = 8, \\
+b &amp;= t_5 = 30, \\
+n &amp;= 5, \\
+f(t) &amp;= 2000 \ln \left( \frac{140000}{140000 - 2100t} \right) - 9.8t.\end{aligned}\]</span></p>
+<p>Now, <span class="math display">\[h = \frac{b - a}{n} = \frac{30 - 8}{5} = \frac{22}{5}\]</span> and <span class="math display">\[t_i = a + ih = 8 + i\left(\frac{22}{5}\right), \quad \text{for } i = 0, 1, 2, 3, 4, 5.\]</span></p>
+<p>Thus, we tabulate the data as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(t_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f(t_i)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\(8\)</span></td>
+<td style="text-align: center;">177.26674301977</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(8 + \frac{22}{5} = \frac{62}{5}\)</span></td>
+<td style="text-align: center;">290.06982595919</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(8 + \frac{44}{5} = \frac{84}{5}\)</span></td>
+<td style="text-align: center;">416.06460201532</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(8 + \frac{66}{5} = \frac{106}{5}\)</span></td>
+<td style="text-align: center;">557.69124227735</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(8 + \frac{88}{5} = \frac{128}{5}\)</span></td>
+<td style="text-align: center;">718.13663089723</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(8 + \frac{110}{5} = \frac{150}{5} = 30\)</span></td>
+<td style="text-align: center;">901.67400151124</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <span class="math display">\[\begin{aligned}
+\int_{8}^{30} f(t)\,dt &amp;\approx T_5 \\
+&amp;= \frac{h}{2} \left[ f(t_0) + f(t_5) + 2 \left( f(t_1) + f(t_2) + f(t_3) + f(t_4) \right) \right] \\
+&amp;= \frac{\frac{22}{5}}{2} \left[ 177.26674301977 + 901.67400151124 + 2(290.06982595919 + 416.06460201532 \right. \\
+&amp;\quad \left. {} + 557.69124227735 + 718.13663089723) \right] \\
+&amp;= \frac{11}{5} \left[ 1078.94074453101 + 2(1981.96230014909) \right] \\
+&amp;= \frac{11}{5} \left[ 1078.94074453101 + 3963.92460029818 \right] \\
+&amp;= \frac{11}{5} \times 5042.86534482919 \\
+&amp;= \boxed{11094.30376302425}\end{aligned}\]</span></p></li>
+<li><p>We want to approximate the integral: <span class="math display">\[\int_{0}^{4} x \sin{x} \, dx\]</span> using the <strong>Trapezoidal Rule</strong> with <span class="math inline">\(n = 5\)</span> subdivisions.</p>
+<p>Here we have: <span class="math display">\[\begin{aligned}
+a &amp;= x_0 = 0, \\
+b &amp;= x_5 = 4, \\
+n &amp;= 5, \\
+f(x) &amp;= x \sin{x}.\end{aligned}\]</span></p>
+<p>Now, <span class="math display">\[h = \frac{b - a}{n} = \frac{4 - 0}{5} = \frac{4}{5}\]</span> and <span class="math display">\[x_i = a + ih = 0 + i\left(\frac{4}{5}\right) = \frac{4i}{5}, \quad \text{for } i = 0, 1, 2, 3, 4, 5.\]</span></p>
+<p>Thus, we tabulate the data as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f(x_i) = x_i \sin{x_i}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;">0.00000000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{4}{5}\)</span></td>
+<td style="text-align: center;">0.57388487272</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{8}{5}\)</span></td>
+<td style="text-align: center;">1.59931776487</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{12}{5}\)</span></td>
+<td style="text-align: center;">1.62111163332</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{16}{5}\)</span></td>
+<td style="text-align: center;">-0.18679725897</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(4\)</span></td>
+<td style="text-align: center;">-3.02720998123</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <span class="math display">\[\begin{aligned}
+\int_{0}^{4} x \sin{x} \, dx &amp;\approx T_5 \\
+&amp;= \frac{h}{2} \left[ f(x_0) + f(x_5) + 2 \left( f(x_1) + f(x_2) + f(x_3) + f(x_4) \right) \right] \\
+&amp;= \frac{\frac{4}{5}}{2} [ 0 + (-3.02720998123) + 2(0.57388487272 + 1.59931776487 \\ &amp;+ 1.62111163332 - 0.18679725897)] \\
+&amp;= \frac{2}{5} \left[ -3.02720998123 + 2(3.60751701294) \right] \\
+&amp;= \frac{2}{5} \left[ -3.02720998123 + 7.21503402588 \right] \\
+&amp;= \frac{2}{5} \times 4.18782404465 \\
+&amp;= \boxed{1.67512961706}\end{aligned}\]</span></p></li>
+<li><p>We want to approximate the integral: <span class="math display">\[\int_{0}^{4} \sqrt{x} \, e^{x} \, dx\]</span> using the <strong>Trapezoidal Rule</strong> with <span class="math inline">\(n = 7\)</span> subdivisions.</p>
+<p>Here we have: <span class="math display">\[\begin{aligned}
+a &amp;= x_0 = 0, \\
+b &amp;= x_7 = 4, \\
+n &amp;= 7, \\
+f(x) &amp;= \sqrt{x} \, e^x.\end{aligned}\]</span></p>
+<p>Now, <span class="math display">\[h = \frac{b - a}{n} = \frac{4 - 0}{7} = \frac{4}{7}\]</span> and <span class="math display">\[x_i = a + ih = 0 + i\left(\frac{4}{7}\right) = \frac{4i}{7}, \quad \text{for } i = 0, 1, 2, \dots, 7.\]</span></p>
+<p>Thus, we tabulate the data as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f(x_i) = \sqrt{x_i}e^{x_i}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;">0.00000000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{4}{7}\)</span></td>
+<td style="text-align: center;">1.33859516201</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{8}{7}\)</span></td>
+<td style="text-align: center;">3.35222008798</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{12}{7}\)</span></td>
+<td style="text-align: center;">7.27020118627</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{16}{7}\)</span></td>
+<td style="text-align: center;">14.86565579667</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{20}{7}\)</span></td>
+<td style="text-align: center;">29.43115830362</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{24}{7}\)</span></td>
+<td style="text-align: center;">57.09081634954</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"><span class="math inline">\(4\)</span></td>
+<td style="text-align: center;">109.19630006629</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <span class="math display">\[\begin{aligned}
+\int_0^4 \sqrt{x} e^x \, dx &amp;\approx T_7 \\
+&amp;= \frac{h}{2} \left[ f(x_0) + f(x_7) + 2 ( f(x_1) + f(x_2) + f(x_3) + f(x_4) + f(x_5) + f(x_6)) \right] \\
+&amp;= \frac{\frac{4}{7}}{2} \left[ 0 + 109.19630006629 + 2(1.33859516201 + 3.35222008798 + 7.27020118627 \right. \\
+&amp;\quad \left. {} + 14.86565579667 + 29.43115830362 + 57.09081634954) \right] \\
+&amp;= \frac{2}{7} \left[ 109.19630006629 + 2(113.34864688509) \right] \\
+&amp;= \frac{2}{7} \left[ 109.19630006629 + 226.69729377018 \right] \\
+&amp;= \frac{2}{7} \times 335.89359383647 \\
+&amp;= \boxed{95.96959823956}\end{aligned}\]</span></p></li>
+<li><p>We want to approximate the integral: <span class="math display">\[\int_{1}^{3} \ln{x} \, dx\]</span> using the <strong>Trapezoidal Rule</strong> with <span class="math inline">\(n = 6\)</span> subdivisions.</p>
+<p>Here we have: <span class="math display">\[\begin{aligned}
+a &amp;= x_0 = 1, \\
+b &amp;= x_6 = 3, \\
+n &amp;= 6, \\
+f(x) &amp;= \ln x.\end{aligned}\]</span></p>
+<p>Now, <span class="math display">\[h = \frac{b - a}{n} = \frac{3 - 1}{6} = \frac{1}{3}\]</span> and <span class="math display">\[x_i = a + ih = 1 + i\left(\frac{1}{3}\right) = \frac{3 + i}{3}, \quad \text{for } i = 0, 1, 2, \dots, 6.\]</span></p>
+<p>Thus, we tabulate the data as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f(x_i) = \ln{x_i}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{3}{3} = 1\)</span></td>
+<td style="text-align: center;">0.00000000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{4}{3}\)</span></td>
+<td style="text-align: center;">0.28768207245</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{5}{3}\)</span></td>
+<td style="text-align: center;">0.51082562377</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{6}{3} = 2\)</span></td>
+<td style="text-align: center;">0.69314718056</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{7}{3}\)</span></td>
+<td style="text-align: center;">0.84729786039</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{8}{3}\)</span></td>
+<td style="text-align: center;">0.98082925301</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{9}{3} = 3\)</span></td>
+<td style="text-align: center;">1.09861228867</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <span class="math display">\[\begin{aligned}
+\int_{1}^{3} \ln{x} \, dx &amp;\approx T_6 \\
+&amp;= \frac{h}{2} \left[ f(x_0) + f(x_6) + 2( f(x_1) + f(x_2) + f(x_3);+ f(x_4) + f(x_5))\right] \\
+&amp;= \frac{\frac{1}{3}}{2} \left[ 0 + 1.09861228867 + 2(0.28768207245 + 0.51082562377 + 0.69314718056 \right. \\
+&amp;\quad \left. {} + 0.84729786039 + 0.98082925301) \right] \\
+&amp;= \frac{1}{6} \left[ 1.09861228867 + 2(3.31978199018) \right] \\
+&amp;= \frac{1}{6} \left[ 1.09861228867 + 6.63956398036 \right] \\
+&amp;= \frac{1}{6} \times 7.73817626903 \\
+&amp;= \boxed{1.28969604484}\end{aligned}\]</span></p></li>
+<li><p>We want to approximate the integral: <span class="math display">\[\int_{0}^{2} x e^{-x} \, dx\]</span> using the <strong>Trapezoidal Rule</strong> with <span class="math inline">\(n = 8\)</span> subdivisions.</p>
+<p>Here we have: <span class="math display">\[\begin{aligned}
+a &amp;= x_0 = 0, \\
+b &amp;= x_8 = 2, \\
+n &amp;= 8, \\
+f(x) &amp;= x e^{-x}.\end{aligned}\]</span></p>
+<p>Now, <span class="math display">\[h = \frac{b - a}{n} = \frac{2 - 0}{8} = \frac{1}{4}\]</span> and <span class="math display">\[x_i = a + ih = 0 + i\left(\frac{1}{4}\right) = \frac{i}{4}, \quad \text{for } i = 0, 1, 2, \dots, 8.\]</span></p>
+<p>Thus, we tabulate the data as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f(x_i) = x_i e^{-x_i}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;">0.00000000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td style="text-align: center;">0.19470019577</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td style="text-align: center;">0.30326532986</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{3}{4}\)</span></td>
+<td style="text-align: center;">0.35427491456</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;">0.36787944117</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{5}{4}\)</span></td>
+<td style="text-align: center;">0.35813099608</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{3}{2}\)</span></td>
+<td style="text-align: center;">0.33469524022</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{7}{4}\)</span></td>
+<td style="text-align: center;">0.30410440104</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;">0.27067056647</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <span class="math display">\[\begin{aligned}
+\int_{0}^{2} x e^{-x} \, dx &amp;\approx T_8 \\
+&amp;= \frac{h}{2} \left[ f(x_0) + f(x_8) + 2\left( f(x_1) + f(x_2) + f(x_3) + f(x_4) + f(x_5) + f(x_6) + f(x_7) \right) \right] \\
+&amp;= \frac{\frac{1}{4}}{2} \left[ 0.00000000000 + 0.27067056647 + 2(0.19470019577 + 0.30326532986 + 0.35427491456 \right. \\
+&amp;\quad \left. +\ 0.36787944117 + 0.35813099608 + 0.33469524022 + 0.30410440104) \right] \\
+&amp;= \frac{1}{8} \left[ 0.27067056647 + 2(2.21605051870) \right] \\
+&amp;= \frac{1}{8} \left[ 0.27067056647 + 4.43210103740 \right] \\
+&amp;= \frac{1}{8} \times 4.70277160387 \\
+&amp;= \boxed{0.58809645048}\end{aligned}\]</span></p></li>
+<li><p>We want to approximate the integral: <span class="math display">\[\int_{0}^{\pi} f(x) \, dx, \quad \text{where } 
+f(x) = 
+\begin{cases}
+\frac{\sin x}{x}, &amp; x &gt; 0 \\
+1, &amp; x = 0
+\end{cases}\]</span> using the <strong>Trapezoidal Rule</strong> with <span class="math inline">\(n = 6\)</span> subdivisions.</p>
+<p>Here we have: <span class="math display">\[\begin{aligned}
+a &amp;= x_0 = 0, \\
+b &amp;= x_6 = \pi, \\
+n &amp;= 6, \\
+f(x) &amp;= \frac{\sin x}{x},\ \text{with } f(0) = 1.\end{aligned}\]</span></p>
+<p>Now, <span class="math display">\[h = \frac{b - a}{n} = \frac{\pi - 0}{6} = \frac{\pi}{6}\]</span> and <span class="math display">\[x_i = a + ih = i \cdot \frac{\pi}{6}, \quad \text{for } i = 0, 1, 2, \dots, 6.\]</span></p>
+<p>Thus, we tabulate the data as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f(x_i) = \dfrac{\sin x_i}{x_i}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;">1.00000000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{\pi}{6}\)</span></td>
+<td style="text-align: center;">0.95492965855</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{\pi}{3}\)</span></td>
+<td style="text-align: center;">0.82699334313</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{\pi}{2}\)</span></td>
+<td style="text-align: center;">0.63661977237</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{2\pi}{3}\)</span></td>
+<td style="text-align: center;">0.41349667157</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{5\pi}{6}\)</span></td>
+<td style="text-align: center;">0.19098593171</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><span class="math inline">\(\pi\)</span></td>
+<td style="text-align: center;">0.00000000000</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <span class="math display">\[\begin{aligned}
+\int_0^{\pi} f(x) \, dx &amp;\approx T_6 \\
+&amp;= \frac{h}{2} \left[ f(x_0) + f(x_6) + 2\left( f(x_1) + f(x_2) + f(x_3) + f(x_4) + f(x_5) \right) \right] \\
+&amp;= \frac{\frac{\pi}{6}}{2} \left[ 1.00000000000 + 0.00000000000 + 2(0.95492965855 + 0.82699334313 + 0.63661977237 \right. \\
+&amp;\quad \left. +\ 0.41349667157 + 0.19098593171) \right] \\
+&amp;= \frac{\pi}{12} \left[ 1.00000000000 + 2(3.02202537733) \right] \\
+&amp;= \frac{\pi}{12} \left[ 1.00000000000 + 6.04405075466 \right] \\
+&amp;= \frac{\pi}{12} \cdot 7.04405075466 \\
+&amp;= \boxed{1.84431223665}\end{aligned}\]</span></p></li>
+</ul>
+<h1 class="unnumbered" id="suggested-solutions-for-activity-2">Suggested Solutions for Activity 2</h1>
+<ul>
+<li><p>We want to approximate the integral: <span class="math display">\[\int_{0}^{1} e^{4x^2} \, dx\]</span> using the <strong>Simpson’s Rule</strong> with <span class="math inline">\(n = 6\)</span> subdivisions.</p>
+<p>Here we have: <span class="math display">\[\begin{aligned}
+a &amp;= x_0 = 0, \\
+b &amp;= x_6 = 1, \\
+n &amp;= 6, \\
+f(x) &amp;= e^{4x^2}.\end{aligned}\]</span></p>
+<p>Now, <span class="math display">\[h = \frac{b - a}{n} = \frac{1 - 0}{6} = \frac{1}{6}\]</span> and <span class="math display">\[x_i = a + ih = i \cdot \frac{1}{6} = \frac{i}{6}, \quad \text{for } i = 0, 1, 2, \dots, 6.\]</span></p>
+<p>Thus, we tabulate the data as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f(x_i) = e^{4x_i^2}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;">1.00000000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td style="text-align: center;">1.11751906874</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{3}\)</span></td>
+<td style="text-align: center;">1.55962349761</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td style="text-align: center;">2.71828182846</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{2}{3}\)</span></td>
+<td style="text-align: center;">5.91669359066</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{5}{6}\)</span></td>
+<td style="text-align: center;">16.08324067206</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;">54.59815003314</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <span class="math display">\[\begin{aligned}
+\int_{0}^{1} e^{4x^2} \, dx &amp;\approx S_6 \\
+&amp;= \frac{h}{3} \left[ f(x_0) + f(x_6) + 4(f(x_1) + f(x_3) + f(x_5)) + 2(f(x_2) + f(x_4)) \right] \\
+&amp;= \frac{\frac{1}{6}}{3} \left[ 1.00000000000 + 54.59815003314 + 4(1.11751906874 + 2.71828182846 + 16.08324067206) \right. \\
+&amp;\quad \left. +\ 2(1.55962349761 + 5.91669359066) \right] \\
+&amp;= \frac{1}{18} \left[ 55.59815003314 + 4(19.91904156926) + 2(7.47631708827) \right] \\
+&amp;= \frac{1}{18} \left[ 55.59815003314 + 79.67616627704 + 14.95263417654 \right] \\
+&amp;= \frac{1}{18} \cdot 150.22695048672 \\
+&amp;= \boxed{8.34594169371}\end{aligned}\]</span></p></li>
+<li><p>We want to approximate the integral: <span class="math display">\[\int_{8}^{30} \left[ 2000 \ln \left( \frac{140000}{140000 - 2100t} \right) - 9.8t \right] dt\]</span> using the <strong>Simpson’s Rule</strong> with <span class="math inline">\(n = 8\)</span> subdivisions.</p>
+<p>Here we have: <span class="math display">\[\begin{aligned}
+a &amp;= t_0 = 8, \\
+b &amp;= t_8 = 30, \\
+n &amp;= 8, \\
+f(t) &amp;= 2000 \ln \left( \frac{140000}{140000 - 2100t} \right) - 9.8t.\end{aligned}\]</span></p>
+<p>Now, <span class="math display">\[h = \frac{b - a}{n} = \frac{22}{8} = \frac{11}{4}, \quad t_i = a + i \cdot h = 8 + i \cdot \frac{11}{4} = \frac{32 + 11i}{4}\]</span></p>
+<p>Thus, we tabulate the data as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(t_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f(t_i)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\(8\)</span></td>
+<td style="text-align: center;">177.26674301977</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{43}{4}\)</span></td>
+<td style="text-align: center;">246.33518139249</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{27}{2}\)</span></td>
+<td style="text-align: center;">320.24688864628</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{65}{4}\)</span></td>
+<td style="text-align: center;">399.51653927417</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(19\)</span></td>
+<td style="text-align: center;">484.74547257626</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{87}{4}\)</span></td>
+<td style="text-align: center;">576.64231351786</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{49}{2}\)</span></td>
+<td style="text-align: center;">676.05011676092</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{109}{4}\)</span></td>
+<td style="text-align: center;">783.98267835199</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;"><span class="math inline">\(30\)</span></td>
+<td style="text-align: center;">901.67400151124</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <span class="math display">\[\begin{aligned}
+\int_{8}^{30} f(t) \, dt &amp;\approx S_8 \\
+&amp;= \frac{h}{3} \left[ f(t_0) + f(t_8) + 4\bigl(f(t_1) + f(t_3) + f(t_5) + f(t_7)\bigr) + 2\bigl(f(t_2) + f(t_4) + f(t_6)\bigr) \right] \\
+&amp;= \frac{\frac{11}{4}}{3} [ 177.26674301977 + 901.67400151124 \\ &amp;+ 4(246.33518139249 + 399.51653927417 + 576.64231351786 + 783.98267835199)\\ &amp; + 2(320.24688864628 + 484.74547257626 + 676.05011676092)] \\
+&amp;= \frac{11}{12} \left[ 1078.94074453101 + 4 \times 2006.47671253651 + 2 \times 1481.04247898346 \right] \\
+&amp;= \frac{11}{12} \left[ 1078.94074453101 + 8025.90685014604 + 2962.08495796692 \right] \\
+&amp;= \frac{11}{12} \times 12066.93255264397 \\
+&amp;= \boxed{11061.35483809031}\end{aligned}\]</span></p></li>
+<li><p>We want to approximate the integral: <span class="math display">\[\int_0^4 x \sin x \, dx\]</span> using the <strong>Simpson’s Rule</strong> with <span class="math inline">\(n = 8\)</span> subdivisions.</p>
+<p>Here we have: <span class="math display">\[\begin{aligned}
+a &amp;= x_0 = 0, \\
+b &amp;= x_8 = 4, \\
+n &amp;= 8, \\
+f(x) &amp;= x \sin x.\end{aligned}\]</span></p>
+<p>Now, <span class="math display">\[h = \frac{b - a}{n} = \frac{4 - 0}{8} = \frac{1}{2}, \quad x_i = a + i h = 0 + i \cdot \frac{1}{2} = \frac{i}{2}\]</span></p>
+<p>Thus, we tabulate the data as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f(x_i)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;">0.00000000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td style="text-align: center;">0.23971276930</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;">0.84147098481</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{3}{2}\)</span></td>
+<td style="text-align: center;">1.49624247991</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;">1.81859485365</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{5}{2}\)</span></td>
+<td style="text-align: center;">1.49618036026</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: center;">0.42336002418</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{7}{2}\)</span></td>
+<td style="text-align: center;">-1.22774129691</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;"><span class="math inline">\(4\)</span></td>
+<td style="text-align: center;">-3.02720998123</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <span class="math display">\[\begin{aligned}
+\int_0^4 x \sin x \, dx &amp;\approx S_8 \\
+&amp;= \frac{h}{3} \left[ f(x_0) + f(x_8) + 4\left(f(x_1) + f(x_3) + f(x_5) + f(x_7)\right) + 2\left(f(x_2) + f(x_4) + f(x_6)\right) \right] \\
+&amp;= \frac{\frac{1}{2}}{3} \Big[ 0 + (-3.02720998123) + 4(0.23971276930 \\ &amp;+ 1.49624247991 + 1.49618036026 - 1.22774129691) \\
+&amp;\quad + 2(0.84147098481 + 1.81859485365 + 0.42336002418) \Big] \\
+&amp;= \frac{1}{6} \Big[ -3.02720998123 + 4(2.00439431256) + 2(3.08342586264) \Big] \\
+&amp;= \frac{1}{6} \Big[ -3.02720998123 + 8.01757725024 + 6.16685172528 \Big] \\
+&amp;= \frac{1}{6} \times 11.15721899429 \\
+&amp;= \boxed{1.85953649904}\end{aligned}\]</span></p></li>
+<li><p>We want to approximate the integral: <span class="math display">\[\int_0^4 \sqrt{x} e^x \, dx\]</span> using the <strong>Simpson’s Rule</strong> with <span class="math inline">\(n = 6\)</span> subdivisions.</p>
+<p>Here we have: <span class="math display">\[\begin{aligned}
+a &amp;= x_0 = 0, \\
+b &amp;= x_6 = 4, \\
+n &amp;= 6, \\
+f(x) &amp;= \sqrt{x} \, e^x.\end{aligned}\]</span></p>
+<p>Now, <span class="math display">\[h = \frac{b - a}{n} = \frac{4}{6} = \frac{2}{3}, \quad x_i = a + i h = i \cdot \frac{2}{3}\]</span></p>
+<p>Thus, we tabulate the data as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f(x_i)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;">0.00000000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{2}{3}\)</span></td>
+<td style="text-align: center;">1.59031818508</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{4}{3}\)</span></td>
+<td style="text-align: center;">4.38055036042</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;">10.44970334824</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{8}{3}\)</span></td>
+<td style="text-align: center;">23.50190056938</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{10}{3}\)</span></td>
+<td style="text-align: center;">51.17851092752</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><span class="math inline">\(4\)</span></td>
+<td style="text-align: center;">109.19630006629</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <span class="math display">\[\begin{aligned}
+\int_0^4 \sqrt{x} e^x \, dx &amp;\approx S_6 \\
+&amp;= \frac{h}{3} \left[ f(x_0) + f(x_6) + 4\left(f(x_1) + f(x_3) + f(x_5)\right) + 2\left(f(x_2) + f(x_4)\right) \right] \\
+&amp;= \frac{\frac{2}{3}}{3} \Big[ 0 + 109.19630006629 + 4(1.59031818508 + 10.44970334824 + 51.17851092752) \\ &amp;+ 2(4.38055036042 + 23.50190056938) \Big] \\
+&amp;= \frac{2}{9} \left[ 109.19630006629 + 4(63.21853246084) + 2(27.88245092980) \right] \\
+&amp;= \frac{2}{9} \left[ 109.19630006629 + 252.87412984336 + 55.76490185960 \right] \\
+&amp;= \frac{2}{9} \times 417.83533176925 \\
+&amp;= \boxed{92.85229594872}\end{aligned}\]</span></p></li>
+<li><p>We want to approximate the integral: <span class="math display">\[\int_1^3 \ln x \, dx\]</span> using the <strong>Simpson’s Rule</strong> with <span class="math inline">\(n = 6\)</span> subdivisions.</p>
+<p>Here we have: <span class="math display">\[\begin{aligned}
+a &amp;= x_0 = 1, \\
+b &amp;= x_6 = 3, \\
+n &amp;= 6, \\
+f(x) &amp;= \ln x.\end{aligned}\]</span></p>
+<p>Now, <span class="math display">\[h = \frac{b - a}{n} = \frac{3 - 1}{6} = \frac{2}{6} = \frac{1}{3}, \quad x_i = a + i h = 1 + \frac{i}{3} = \frac{3 + i}{3}\]</span></p>
+<p>Thus, we tabulate the data as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f(x_i)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{3}{3}\)</span></td>
+<td style="text-align: center;">0.00000000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{4}{3}\)</span></td>
+<td style="text-align: center;">0.28768207245</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{5}{3}\)</span></td>
+<td style="text-align: center;">0.51082562377</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;">0.69314718056</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{7}{3}\)</span></td>
+<td style="text-align: center;">0.84729786039</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{8}{3}\)</span></td>
+<td style="text-align: center;">0.98082925301</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: center;">1.09861228867</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <span class="math display">\[\begin{aligned}
+\int_1^3 \ln x \, dx &amp;\approx S_6 \\
+&amp;= \frac{h}{3} \left[ f(x_0) + f(x_6) + 4\left(f(x_1) + f(x_3) + f(x_5)\right) + 2\left(f(x_2) + f(x_4)\right) \right] \\
+&amp;= \frac{\frac{1}{3}}{3} \left[ 0 + 1.09861228867 + 4(0.28768207245 + 0.69314718056 + 0.98082925301) + 2(0.51082562377 + 0.84729786039) \right] \\
+&amp;= \frac{1}{9} \left[ 1.09861228867 + 4(1.96165850602) + 2(1.35812348416) \right] \\
+&amp;= \frac{1}{9} \left[ 1.09861228867 + 7.84663402408 + 2.71624696832 \right] \\
+&amp;= \frac{1}{9} \times 11.66149328107 \\
+&amp;= \boxed{1.29572147567}\end{aligned}\]</span></p></li>
+<li><p>We want to approximate the integral: <span class="math display">\[\int_0^2 x e^{-x} \, dx\]</span> using the <strong>Simpson’s Rule</strong> with <span class="math inline">\(n = 8\)</span> subdivisions.</p>
+<p>Here we have: <span class="math display">\[\begin{aligned}
+a &amp;= x_0 = 0, \\
+b &amp;= x_8 = 2, \\
+n &amp;= 8, \\
+f(x) &amp;= x e^{-x}.\end{aligned}\]</span></p>
+<p>Now, <span class="math display">\[h = \frac{b - a}{n} = \frac{2 - 0}{8} = \frac{1}{4}, \quad x_i = a + i h = i \cdot \frac{1}{4} = \frac{i}{4}\]</span></p>
+<p>Thus, we tabulate the data as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f(x_i)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;">0.00000000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td style="text-align: center;">0.19470019577</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td style="text-align: center;">0.30326532986</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{3}{4}\)</span></td>
+<td style="text-align: center;">0.35427491456</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;">0.36787944117</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{5}{4}\)</span></td>
+<td style="text-align: center;">0.35813099608</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{3}{2}\)</span></td>
+<td style="text-align: center;">0.33469524022</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{7}{4}\)</span></td>
+<td style="text-align: center;">0.30410440104</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;">0.27067056647</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <span class="math display">\[\begin{aligned}
+\int_0^2 x e^{-x} \, dx &amp;\approx S_8 \\
+&amp;= \frac{h}{3} \left[ f(x_0) + f(x_8) + 4\left(f(x_1) + f(x_3) + f(x_5) + f(x_7)\right) + 2\left(f(x_2) + f(x_4) + f(x_6)\right) \right] \\
+&amp;= \frac{\frac{1}{4}}{3} \left[ 0 + 0.27067056647 + 4(0.19470019577 + 0.35427491456 + 0.35813099608 + 0.30410440104) \right. \\
+&amp;\quad \left. + 2(0.30326532986 + 0.36787944117 + 0.33469524022) \right] \\
+&amp;= \frac{1}{12} \left[ 0.27067056647 + 4(1.21121050745) + 2(1.00584001125) \right] \\
+&amp;= \frac{1}{12} \left[ 0.27067056647 + 4.84484202980 + 2.01168002250 \right] \\
+&amp;= \frac{1}{12} \times 7.12719361877 \\
+&amp;= \boxed{0.59393271823}\end{aligned}\]</span></p></li>
+<li><p>We want to approximate the integral: <span class="math display">\[\int_0^\pi f(x) \, dx, \quad \text{where } f(x) = \begin{cases}
+\frac{\sin x}{x}, &amp; x &gt; 0 \\
+1, &amp; x = 0
+\end{cases}\]</span> using the <strong>Simpson’s Rule</strong> with <span class="math inline">\(n = 6\)</span> subdivisions.</p>
+<p>Here we have: <span class="math display">\[\begin{aligned}
+a &amp;= x_0 = 0, \\
+b &amp;= x_6 = \pi, \\
+n &amp;= 6, \\
+f(x) &amp;= \begin{cases}
+\frac{\sin x}{x}, &amp; x &gt; 0 \\
+1, &amp; x = 0
+\end{cases}.\end{aligned}\]</span></p>
+<p>Now, <span class="math display">\[h = \frac{b - a}{n} = \frac{\pi}{6}, \quad x_i = a + i h = \frac{i \pi}{6}\]</span></p>
+<p>Thus, we tabulate the data as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f(x_i)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;">1.00000000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{\pi}{6}\)</span></td>
+<td style="text-align: center;">0.95492965855</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{\pi}{3}\)</span></td>
+<td style="text-align: center;">0.82699334313</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{\pi}{2}\)</span></td>
+<td style="text-align: center;">0.63661977237</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{2\pi}{3}\)</span></td>
+<td style="text-align: center;">0.41349667157</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{5\pi}{6}\)</span></td>
+<td style="text-align: center;">0.19098593171</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><span class="math inline">\(\pi\)</span></td>
+<td style="text-align: center;">0.00000000000</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <span class="math display">\[\begin{aligned}
+\int_0^\pi f(x) \, dx &amp;\approx S_6 \\
+&amp;= \frac{h}{3} \left[ f(x_0) + f(x_6) + 4 \left(f(x_1) + f(x_3) + f(x_5) \right) + 2 \left(f(x_2) + f(x_4) \right) \right] \\
+&amp;= \frac{\frac{\pi}{6}}{3} [ 1.00000000000 + 0.00000000000 + 4 \left(0.95492965855 + 0.63661977237 + 0.19098593171 \right)\\ &amp; + 2 \left(0.82699334313 + 0.41349667157 \right) ] \\
+&amp;= \frac{\pi}{18} \left[ 1 + 4(1.78253536263) + 2(1.24049001470) \right] \\
+&amp;= \frac{\pi}{18} \left[ 1 + 7.13014145052 + 2.48098002940 \right] \\
+&amp;= \frac{\pi}{18} \times 10.61112147992 \\
+&amp;= \boxed{1.85199007154}\end{aligned}\]</span></p></li>
+</ul>
